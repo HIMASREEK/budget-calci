@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenditure Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="welcome" class="page">
+        <h1>Welcome to Expenditure Management System</h1>
+        <button onclick="showLogin()">Login</button>
+        <button onclick="showRegister()">Register</button>
+    </div>
+    
+    <div id="login" class="page" style="display: none;">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" name="username" required>
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="password" required>
+            <button type="submit">Submit</button>
+        </form>
+        <button onclick="showRegister()">Register</button>
+    </div>
+    
+    <div id="register" class="page" style="display: none;">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <label for="registerUsername">Username:</label>
+            <input type="text" id="registerUsername" name="username" required>
+            <label for="registerPassword">Password:</label>
+            <input type="password" id="registerPassword" name="password" required>
+            <button type="submit">Register</button>
+        </form>
+        <button onclick="showLogin()">Back to Login</button>
+    </div>
+
+    <div id="dashboard" class="page" style="display: none;">
+        <h2>Dashboard</h2>
+        
+        <div class="budget-container">
+            <h3>Set Budget</h3>
+            <form id="budgetForm">
+                <label for="month">Year & Month:</label>
+                <input type="text" id="month" name="month" placeholder="YYYY-MM" required>
+                <label for="budgetAmount">Amount:</label>
+                <input type="number" id="budgetAmount" name="budgetAmount" required>
+                <button type="submit">Set Budget</button>
+            </form>
+        </div>
+        
+        <div class="budget-container">
+            <h3>Add Expenditure</h3>
+            <form id="expenseForm">
+                <label for="expenseMonth">Month:</label>
+                <input type="text" id="expenseMonth" name="expenseMonth" placeholder="YYYY-MM" required>
+                <label for="expenseCategory">Category:</label>
+                <select id="expenseCategory" name="expenseCategory" required>
+                    <option value="rent">Rent</option>
+                    <option value="food">Food</option>
+                    <option value="electricity">Electricity</option>
+                    <option value="other">Other</option>
+                </select>
+                <label for="expenseAmount">Amount:</label>
+                <input type="number" id="expenseAmount" name="expenseAmount" required>
+                <button type="submit">Add Expenditure</button>
+            </form>
+        </div>
+        
+        <div class="budget-container">
+            <h3>Add Savings</h3>
+            <form id="savingsForm">
+                <label for="savingsMonth">Month:</label>
+                <input type="text" id="savingsMonth" name="savingsMonth" placeholder="YYYY-MM" required>
+                <label for="savingsAmount">Amount:</label>
+                <input type="number" id="savingsAmount" name="savingsAmount" required>
+                <button type="submit">Add Savings</button>
+            </form>
+        </div>
+        
+        <div class="budget-container">
+            <h3>Summary</h3>
+            <div id="summary"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

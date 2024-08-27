@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #e0f7fa; /* Common background color */
+}
+
+.page h1 {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+}
+
+/* General Header Styling */
+h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Welcome Section */
+#welcome {
+    background-color: #ffcccb;
+}
+
+/* Login Section */
+#login {
+    background-color: #add8e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+#loginForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#loginForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#loginForm input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#loginForm button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+#loginForm button:hover {
+    background-color: #218838;
+}
+
+/* Dashboard Section */
+#dashboard {
+    background-color: #e0f7fa; /* Common background color */
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+#dashboard div {
+    flex: 1 1 calc(50% - 40px); /* Adjust for spacing between items */
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+}
+
+/* Set Budget Section */
+#budgetForm {
+    background-color: #ffcccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Add Expenditure Section */
+#expenseForm {
+    background-color: #ccffcc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Add Savings Section */
+#savingsForm {
+    background-color: #cce5ff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Summary Section */
+#summary {
+    background-color: #ffeeba;
+    padding: 20px;
+    border-radius: 8px;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#summary h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#summary div {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #dashboard {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #dashboard div {
+        width: 100%;
+    }
+}
